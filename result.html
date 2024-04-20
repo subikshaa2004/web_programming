@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .result-card {
+            background-color: #fff;
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .result-card h2 {
+            color: #FF5733;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 32px;
+        }
+        
+        .result-card p {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+        
+        .result-details {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        
+        .result-details p {
+            margin: 0 20px;
+            font-size: 18px;
+            color: #666;
+        }
+        
+        .result-actions {
+            text-align: center;
+        }
+        
+        .result-actions button {
+            background-color: #FF5733;
+            color: #fff;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-size: 20px;
+            margin: 0 10px;
+            border: 2px solid #FF5733;
+        }
+        
+        .result-actions button:hover {
+            background-color: #FF8C66;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="result-card">
+            <h2>Quiz Result</h2>
+            <p>Congratulations! You've completed the quiz.</p>
+            <div class="result-details">
+                <p>Score: <strong>8/10</strong></p>
+                <p>Time taken: <strong>15 minutes</strong></p>
+            </div>
+            <div class="result-actions">
+                <button>View Answers</button>
+                <button>Try Again</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
