@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Application - Profile</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      width: 80%;
+      max-width: 800px;
+      margin: 50px auto;
+    }
+
+    .profile {
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .avatar {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      color: #FF5733;
+    }
+
+    p {
+      margin: 5px 0;
+    }
+
+    input[type="text"],
+    input[type="email"] {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    .edit-btn {
+      background-color: #FF5733;
+      color: white;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 4px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .edit-btn:hover {
+      background-color: #ff704d;
+    }
+
+    .test-item {
+      margin-bottom: 10px;
+      padding: 10px;
+      border-radius: 4px;
+      background-color: #f9f9f9;
+    }
+
+    .test-item h3 {
+      margin: 5px 0;
+      color: #FF5733;
+    }
+
+    .test-item p {
+      margin: 5px 0;
+    }
+
+    input[type="number"][readonly] {
+      background-color: #f2f2f2;
+      border: 1px solid #ccc;
+
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="profile">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhnJ8ohO113eX3thYt_EViTew3NXN3xwKxi4DzqigRhpA0GY6OWlgY5yZCOqPLda4y5fk&usqp=CAU" alt="Avatar" class="avatar">
+      <h1>John Doe</h1>
+      <p>Email: <input type="email" id="email" value="johndoe@example.com" disabled></p>
+      <p>Username: <input type="text" id="username" value="johndoe123" disabled></p>
+      <button class="edit-btn" id="edit-btn">Edit</button>
+    </div>
+
+    <div class="tests">
+      <h2>Tests Attended</h2>
+      <div class="test-item">
+        <h3>Test 1</h3>
+        <p>Score: <input type="number" value="90" readonly>%</p>
+      </div>
+      <div class="test-item">
+        <h3>Test 2</h3>
+        <p>Score: <input type="number" value="80" readonly>%</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    var editBtn = document.getElementById("edit-btn");
+    var emailInput = document.getElementById("email");
+    var usernameInput = document.getElementById("username");
+
+    editBtn.addEventListener("click", function() {
+      if (editBtn.textContent === "Edit") {
+        editBtn.textContent = "Save";
+        emailInput.disabled = false;
+        usernameInput.disabled = false;
+      } else {
+        editBtn.textContent = "Edit";
+        emailInput.disabled = true;
+        usernameInput.disabled = true;
+      }
+    });
+  </script>
+</body>
+</html>
